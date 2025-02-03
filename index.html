@@ -46,17 +46,18 @@
         
         p {
             font-size: 1.2em;
-            background-image: linear-gradient(45deg, #FFD700, #FF1493, #00B7FF);
+            background-image: linear-gradient(90deg, #FFD700, #FF1493, #00B7FF, #FFD700);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: gradientMove 5s linear infinite;
+            background-size: 200% 200%;  /* Adjust this value for speed of animation */
+            animation: moveGradient 5s linear infinite;
         }
         
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        @keyframes moveGradient {
+            0% { background-position: 200% 0; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0 0; }
         }
     </style>
 </head>
